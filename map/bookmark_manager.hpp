@@ -276,7 +276,7 @@ public:
 
   kml::MarkGroupId GetCategoryId(std::string const & name) const;
 
-  kml::GroupIdCollection const & GetBmGroupsIdList() const { return m_bmGroupsIdList; }
+  kml::GroupIdCollection const & GetUnsortedBmGroupsIdList() const { return m_unsortedBmGroupsIdList; }
   kml::GroupIdCollection GetSortedBmGroupIdList() const;
   bool HasBmCategory(kml::MarkGroupId groupId) const;
   kml::MarkGroupId LastEditedBMCategory();
@@ -725,7 +725,7 @@ private:
   ScreenBase m_viewport;
 
   CategoriesCollection m_categories;
-  kml::GroupIdCollection m_bmGroupsIdList;
+  kml::GroupIdCollection m_unsortedBmGroupsIdList;
 
   std::string m_lastCategoryUrl;
   kml::MarkGroupId m_lastEditedGroupId = kml::kInvalidMarkGroupId;

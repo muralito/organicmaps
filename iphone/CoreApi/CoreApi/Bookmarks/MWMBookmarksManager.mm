@@ -639,7 +639,7 @@ static BookmarkManager::SortingType convertSortingTypeToCore(MWMBookmarksSorting
 #pragma mark - Catalog
 
 - (NSArray<MWMBookmarkGroup *> *)userCategories {
-  auto const & list = self.bm.GetBmGroupsIdList();
+  auto const & list = self.bm.GetUnsortedBmGroupsIdList();
   NSMutableArray<MWMBookmarkGroup *> * result = [[NSMutableArray alloc] initWithCapacity:list.size()];
 
   for (auto const & groupId : list)
